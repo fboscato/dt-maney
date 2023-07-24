@@ -26,3 +26,10 @@ td {
   }
 }
 `
+interface PrinceHighlightProps {
+  variant: 'icome' | 'outcome'
+}
+
+export const PrinceHighlight = styled.span<PrinceHighlightProps>`
+ color: ${props => props.variant === 'icome'? props.theme['green-300']:props.theme['red-300']}
+`
