@@ -28,9 +28,9 @@ td {
 }
 `
 interface PrinceHighlightProps {
-  variant: 'icome' | 'outcome'
+  variant: 'income' | 'outcome'
 }
 
 export const PrinceHighlight = styled.span<PrinceHighlightProps>`
- color: ${props => props.variant === 'icome'? props.theme['green-300']:props.theme['red-300']}
+ color: ${props => props.variant === 'income'? props.theme['green-300']:props.theme['red-300']}
 `
