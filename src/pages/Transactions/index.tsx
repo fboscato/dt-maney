@@ -5,11 +5,11 @@ import { SearchForm } from "./components/SearchForm";
 
 import { PrinceHighlight, TransactionContainer, TransactionTable } from "./styles";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { dataFormatter, princeFormatter, princeFromatter } from "../../utils/formatter";
+import { dataFormatter, princeFormatter } from "../../utils/formatter";
 
 
 export function Transactions() {
-  const {transactions} = useContext(TransactionsContext)
+  const { transactions } = useContext(TransactionsContext)
   return (
     <div>
       <Header />
@@ -19,7 +19,7 @@ export function Transactions() {
         <TransactionTable>
           <tbody>
             {transactions.map(transaction => {
-              return (                
+              return (
                 <tr key={transaction.id}>
                   <td width="50%">{transaction.description}</td>
                   <td>
@@ -30,7 +30,7 @@ export function Transactions() {
                   </td>
                   <td>{transaction.category}</td>
                   <td>
-                    { dataFormatter.format(new Date(transaction.createAt))}
+                    {dataFormatter.format(new Date(transaction.createAt))}
                   </td>
                 </tr>
               )

@@ -4,7 +4,7 @@ import { princeFormatter } from "../../utils/formatter";
 import { useSummary } from "../../hooks/useSummary";
 
 export function Summary() {
- const summary = useSummary()
+  const summary = useSummary()
   return (
     <SummaryContainer>
       <SummaryCard>
