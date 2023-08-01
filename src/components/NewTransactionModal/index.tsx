@@ -25,9 +25,9 @@ export function NewTransactionModal() {
     reset,
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormShema),
-    // defaultValues: {
-    //   type: 'income'
-    // }
+    defaultValues: {
+      type: 'income'
+    }
   })
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
     const { description, price, category, type } = data
@@ -72,9 +72,9 @@ export function NewTransactionModal() {
           <Controller
             control={control}
             name="type"
-            render={({ field }) => {
+            render={({ field }) => {              
               return (
-                <TransactionType onValueChenge={field.onChange} value={field.value}>
+                <TransactionType onValueChange={field.onChange} value={field.value}>
                   <TransactionTypeButton variant="income" value="income">
                     <ArrowCircleUp size={24} />
                     Entrada
