@@ -6,7 +6,7 @@ import { SearchForm } from "./components/SearchForm";
 import { PrinceHighlight, TransactionContainer, TransactionTable } from "./styles";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { dataFormatter, princeFormatter } from "../../utils/formatter";
-
+//
 
 export function Transactions() {
   const { transactions } = useContext(TransactionsContext)
